@@ -29,6 +29,10 @@ jobs:
       run: |
         python src/train_model.py
 
+    - name: Evaluate Model
+      run: |
+          python src/evaluate_model.py
+
     - name: Upload trained model
       uses: actions/upload-artifact@v4
       with:

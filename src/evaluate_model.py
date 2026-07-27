@@ -45,7 +45,7 @@ X_test = scaler.transform(X_test)
 # -----------------------
 # Load Trained Model
 # -----------------------
-model = joblib.load("models/logistic_regression_model.pkl")
+model = joblib.load("models/best_model.pkl")
 
 # -----------------------
 # Make Predictions
@@ -85,7 +85,8 @@ disp.plot(cmap="Blues")
 
 plt.title("Confusion Matrix")
 
-plt.show()
+plt.savefig("confusion_matrix.png")
+plt.close()
 
 # -----------------------
 # ROC Curve
@@ -98,6 +99,7 @@ RocCurveDisplay.from_estimator(
 
 plt.title("ROC Curve")
 
-plt.show()
+plt.savefig("roc_curve.png")
+plt.close()
 
 print("\nModel evaluation completed successfully!")

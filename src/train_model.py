@@ -156,21 +156,21 @@ if best_model_name == "Logistic Regression":
 
     joblib.dump(
         lr_model,
-        "models/logistic_regression_model.pkl"
+        "models/best_model.pkl"
     )
 
 elif best_model_name == "Decision Tree":
 
     joblib.dump(
         dt_model,
-        "models/decision_tree_model.pkl"
+        "models/best_model.pkl"
     )
 
 else:
 
     joblib.dump(
         rf_model,
-        "models/random_forest_model.pkl"
+        " models/best_model.pkl"
     )
 
 print("\nBest model saved successfully!")
