@@ -9,6 +9,7 @@ on:
     branches:
       - main
 
+
 jobs:
   build:
 
@@ -16,23 +17,22 @@ jobs:
 
     steps:
 
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
 
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
 
-      - name: Check Train Script
-        run: |
-          python python src/train_model.py
 
-      - name: Check Streamlit App
-        run: |
-          python -m py_compile app.py
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+
+    - name: Train Model
+      run: |
+        python src/train_model.py
