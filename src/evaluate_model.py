@@ -60,6 +60,22 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"\nAccuracy: {accuracy:.4f}")
 
 # -----------------------
+# Model Quality Gate
+# -----------------------
+
+MIN_ACCURACY = 0.80
+
+if accuracy < MIN_ACCURACY:
+    raise Exception(
+        f"Model accuracy {accuracy:.4f} is below required threshold {MIN_ACCURACY}"
+    )
+
+else:
+    print(
+        f"Model passed quality check with accuracy {accuracy:.4f}"
+    )
+
+# -----------------------
 # Classification Report
 # -----------------------
 print("\nClassification Report:\n")
