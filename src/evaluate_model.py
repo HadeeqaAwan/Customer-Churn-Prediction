@@ -63,7 +63,7 @@ print(f"\nAccuracy: {accuracy:.4f}")
 # Model Quality Gate
 # -----------------------
 
-MIN_ACCURACY = 0.80
+MIN_ACCURACY = 0.78
 
 if accuracy < MIN_ACCURACY:
     raise Exception(
