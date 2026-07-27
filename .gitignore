@@ -5,7 +5,6 @@ __pycache__/
 models/
 *.pkl
 
-data/preprocessed_data.csv
 
 .idea/
 .vscode/
