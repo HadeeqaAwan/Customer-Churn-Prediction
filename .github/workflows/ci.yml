@@ -31,7 +31,7 @@ jobs:
 
       - name: Check Train Script
         run: |
-          python train.py
+          python python src/train_model.py
 
       - name: Check Streamlit App
         run: |
